@@ -1,4 +1,4 @@
-# Docker Image for Zentao
+# Docker Image for Zentao International version
 [![Docker Build Status](https://img.shields.io/docker/build/idoop/zentao.svg)](https://hub.docker.com/r/idoop/zentao/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/idoop/zentao.svg)](https://hub.docker.com/r/idoop/zentao/)
 [![Docker Automated build](https://img.shields.io/docker/automated/idoop/zentao.svg)](https://hub.docker.com/r/idoop/zentao/)
@@ -9,7 +9,7 @@ Auto build docker image for zentao(禅道),include open source edition and pro e
 
 DockerHub:[https://hub.docker.com/r/idoop/zentao/](https://hub.docker.com/r/idoop/zentao/)
 
-Office Support:[http://www.zentao.net/](http://www.zentao.net/)
+Office Support:[http://www.zentao.pm/](http://www.zentao.pm/)
 ### Tags
 
 **Open soure edition**
@@ -35,7 +35,7 @@ mkdir -p /data/zbox && docker run -d -p 80:80 -p 3306:3306 \
         -e SMTP_HOST="163.177.90.125 smtp.exmail.qq.com" \
         -v /data/zbox/:/opt/zbox/ \
         --name zentao-server \
-        idoop/zentao:latest
+        dodoinblue/zentao-int:latest
 ```
 
 pro edition:
@@ -46,7 +46,7 @@ mkdir -p /data/zbox && docker run -d -p 80:80 -p 3306:3306 \
         -e SMTP_HOST="163.177.90.125 smtp.exmail.qq.com" \
         -v /data/zbox/:/opt/zbox/ \
         --name zentao-server-pro \
-        idoop/zentao:pro
+        dodoinblue/zentao-int:pro
 ```
 
 Note: Make sure your Host feed available on either port `80` or `3306`.

@@ -1,7 +1,7 @@
 version: "2"
 services: 
   zentao:
-    image: idoop/zentao:pro
+    image: dodoinblue/zentao-int:pro
     container_name: zentao
     ports:
       - "80:80"
