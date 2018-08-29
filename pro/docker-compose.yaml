@@ -1,8 +1,11 @@
-version: "2"
+version: "3"
 services: 
   zentao:
     image: dodoinblue/zentao-int:pro
-    container_name: zentao
+    container_name: zentao-int
+    build:
+      context: .
+      dockerfile: ./Dockerfile
     ports:
       - "80:80"
       - "3306:3306"
@@ -15,6 +18,6 @@ services:
       BIND_ADDRESS: "false"
       SMTP_HOST: "163.177.90.125 smtp.exmail.qq.com"
     volumes:
-    # specifies the path replace "./data".
-      - ./data:/opt/zbox/
+    # specifies the path replace "~/volumes/zbox-int".
+      - ~/volumes/zbox-int/:/opt/zbox/
     restart: always

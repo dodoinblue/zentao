@@ -1,8 +1,11 @@
 version: "2"
 services: 
   zentao:
-    image: idoop/zentao-int:latest
-    container_name: zentao
+    image: dodoinblue/zentao-int:latest
+    container_name: zentao-int
+    build:
+      context: .
+      dockerfile: ./Dockerfile
     # if web response code: 310 ERR_TOO_MANY_REDIRECTS, please use host mode.
 #    network_mode: "host"
     ports:
